@@ -13,12 +13,15 @@ define(["leaflet", "jquery"], function (L, $) {
         includes: L.Mixin.Events,
 
         options: {
+            zoomClassNamePrefix: "zoom-"
         },
 
         initialize: function (domId, continent, floor, options) {
             var self = this;
 
             L.setOptions(self, options);
+
+            self.loadFired = false;
 
             self.domObj = $("#" + domId);
             if (!self.domObj.length) {
@@ -56,8 +59,8 @@ define(["leaflet", "jquery"], function (L, $) {
 
                 /* Set up event handlers to add a class with the current
                  * zoom level to the DOM element. */
-                self.map.on("zoomstart", function () { this.domObj.removeClass("zoom-" + this.map.getZoom()); }, self)
-                        .on("zoomend",   function () { this.domObj.addClass("zoom-" + this.map.getZoom()); }, self)
+                self.map.on("zoomstart", function () { this.domObj.removeClass(this.options.zoomClassNamePrefix + this.map.getZoom()); }, self)
+                        .on("zoomend",   function () { this.domObj.addClass(this.options.zoomClassNamePrefix + this.map.getZoom()); }, self)
                         .fire("zoomend");
             });
         },
@@ -106,6 +109,11 @@ define(["leaflet", "jquery"], function (L, $) {
 
                 self.map.setMaxBounds(bounds);
                 self.map.setView(bounds.getCenter(), 2);
+
+                if (!self.loadFired) {
+                    self.fire("load");
+                }
+                self.fire("floorchange");
             });
         }
     });
