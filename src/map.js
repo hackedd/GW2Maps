@@ -1,9 +1,9 @@
-define(["require", "leaflet", "jquery"], function(require, L, $) {
-    function getCoordinates(arguments) {
-        if (arguments.length == 1)
-            return arguments[0];
-        if (arguments.length == 2)
-            return [arguments[0], arguments[1]];
+define(["leaflet", "jquery"], function(L, $) {
+    function getCoordinates(args) {
+        if (args.length == 1)
+            return args[0];
+        if (args.length == 2)
+            return [args[0], args[1]];
         throw new Error("Invalid number of arguments");
     }
 
@@ -50,7 +50,7 @@ define(["require", "leaflet", "jquery"], function(require, L, $) {
                     .on("zoomend",   function() { this.domObj.addClass("zoom-" + this.map.getZoom()); }, self)
                     .fire("zoomend");
         });
-    };
+    }
 
     GW2Map.prototype.project = function() {
         return this.map.project(getCoordinates(arguments), this.map.getMaxZoom());
