@@ -54,6 +54,8 @@ define(["leaflet", "jquery"], function (L, $) {
                     attributionControl: false
                 });
 
+                self.fire("create");
+
                 /* Retrieve floor data and create the tile layer. */
                 self.setFloor(floor);
 
@@ -111,9 +113,11 @@ define(["leaflet", "jquery"], function (L, $) {
                 self.map.setView(bounds.getCenter(), 2);
 
                 if (!self.loadFired) {
+                    self.loadFired = true;
                     self.fire("load");
                 }
-                self.fire("floorchange");
+
+                self.fire("floorchange", {continent: self.continent, floor: floor, data: data});
             });
         }
     });
