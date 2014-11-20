@@ -4,7 +4,8 @@ define(["leaflet", "jquery"], function (L, $) {
             "skill": "Skill Point",
             "task": "Task",
             "vista": "Vista",
-            "waypoint": "Waypoint"
+            "waypoint": "Waypoint",
+            "unlock": "Dungeon"
         },
         PoiMarker,
         icons;
@@ -14,14 +15,15 @@ define(["leaflet", "jquery"], function (L, $) {
             var defaultOptions;
 
             this.poi = poi;
+
             defaultOptions = {
                 title: this.getName(),
-                icon: icons[poi.type + "-complete"],
+                icon: icons[poi.type] || L.Marker.options.icon,
                 raiseOnHover: true
             };
 
             L.Marker.prototype.initialize.call(this, latlng,
-                    L.extend(options || {}, defaultOptions));
+                    L.extend(defaultOptions, options || {}));
         },
 
         getPoi: function () {
@@ -34,9 +36,9 @@ define(["leaflet", "jquery"], function (L, $) {
 
         setIcon: function (icon) {
             if (icon === "default" || icon === "complete") {
-                icon = icons[this.poi.type + "-complete"];
-            } else if (icon === "empty" || icon === "incomplete") {
                 icon = icons[this.poi.type];
+            } else if (icon === "empty" || icon === "incomplete") {
+                icon = icons[this.poi.type + "-empty"];
             }
 
             L.Marker.prototype.setIcon.call(this, icon);
@@ -58,7 +60,7 @@ define(["leaflet", "jquery"], function (L, $) {
         icons = {};
         $.each(pointTypes, function (key) {
             createIcon(key);
-            createIcon(key + "-complete");
+            createIcon(key + "-empty");
         });
     }
 
@@ -82,7 +84,7 @@ define(["leaflet", "jquery"], function (L, $) {
                         poiMarker(poi, map.unproject(poi.coord)).addTo(layer);
                     }
 
-                    if (!type || type === "landmark" || type === "vista" || type === "waypoint") {
+                    if (type !== "skill" && type !== "task") {
                         $.each(this.points_of_interest, function () {
                             if (!type || this.type === type) {
                                 addPoi(this);
