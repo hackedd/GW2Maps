@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guild Wars 2 Points of Interest</title>
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6/leaflet.css" rel="stylesheet" media="screen">
+
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+        margin: 2em auto;
+        width: 960px;
+      }
+      #map {
+        width: 960px;
+        height: 900px;
+        margin: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Guild Wars 2 Points of Interest</h1>
+    <div id="map"></div>
+
+    <script>
+    /*<![CDATA[*/
+    var require = {
+        baseUrl: "src",
+        paths: {
+            "jquery": "//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery",
+            "leaflet": "//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet-src",
+        }
+    }
+    /*]]>*/
+    </script>
+    <script src="src/require-2.1.14.js"></script>
+    <script>
+      require(["leaflet", "jquery", "map", "poi", "search"], function (L, $, gw2map, poi, search) {
+          var map = gw2map.init("map", "Tyria");
+
+          map.on("create", function () {
+              var pois = poi.addLayer(map, "landmark"),
+                  skillPoints = poi.addLayer(map, "skill"),
+                  tasks = poi.addLayer(map, "task"),
+                  vistas = poi.addLayer(map, "vista"),
+                  waypoints = poi.addLayer(map, "waypoint"),
+                  dungeons = poi.addLayer(map, "unlock"),
+                  layers,
+                  layerControl;
+
+              layers = {
+                  "Landmarks": pois,
+                  "Skill Points": skillPoints,
+                  "Tasks": tasks,
+                  "Vistas": vistas,
+                  "Waypoints": waypoints,
+                  "Dungeons": dungeons
+              };
+
+              layerControl = L.control.layers({}, layers);
+              layerControl.addTo(map.map);
+          });
+      });
+    </script>
+  </body>
+</html>
