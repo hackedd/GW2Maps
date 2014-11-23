@@ -51,9 +51,9 @@ define(["leaflet", "jquery"], function (L, $) {
 
     function createIcons() {
         function createIcon(name) {
-            icons[name] = L.icon({
+            icons[name] = L.divIcon({
                 iconSize: [20, 20],
-                iconUrl: "icons/" + name + ".png"
+                className: "poi-icon poi-icon-" + name
             });
         }
 

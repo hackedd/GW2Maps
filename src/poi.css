@@ -1,0 +1,38 @@
+.poi-icon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+.poi-icon-landmark {
+    background-image: url(../icons/landmark.png);
+}
+.poi-icon-landmark-empty {
+    background-image: url(../icons/landmark-empty.png);
+}
+.poi-icon-skill {
+    background-image: url(../icons/skill.png);
+}
+.poi-icon-skill-empty {
+    background-image: url(../icons/skill-empty.png);
+}
+.poi-icon-task {
+    background-image: url(../icons/task.png);
+}
+.poi-icon-task-empty {
+    background-image: url(../icons/task-empty.png);
+}
+.poi-icon-vista {
+    background-image: url(../icons/vista.png);
+}
+.poi-icon-vista-empty {
+    background-image: url(../icons/vista-empty.png);
+}
+.poi-icon-waypoint {
+    background-image: url(../icons/waypoint.png);
+}
+.poi-icon-waypoint-empty {
+    background-image: url(../icons/waypoint-empty.png);
+}
+.poi-icon-unlock {
+    background-image: url(../icons/unlock.png);
+}
