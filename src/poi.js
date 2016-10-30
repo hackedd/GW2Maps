@@ -19,7 +19,7 @@ PoiMarker = L.Marker.extend({
 
         defaultOptions = {
             title: this.getName(),
-            icon: icons[poi.type] || L.Marker.options.icon,
+            icon: icons[poi.type] || L.Marker.prototype.options.icon,
             raiseOnHover: true
         };
 
@@ -46,8 +46,8 @@ PoiMarker = L.Marker.extend({
     }
 });
 
-function poiMarker(poi, options) {
-    return new PoiMarker(poi, options);
+function poiMarker(poi, latlng, options) {
+    return new PoiMarker(poi, latlng, options);
 }
 
 function createIcons() {
