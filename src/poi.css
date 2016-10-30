@@ -9,11 +9,11 @@
 .poi-icon-landmark-empty {
     background-image: url(../icons/landmark-empty.png);
 }
-.poi-icon-skill {
-    background-image: url(../icons/skill.png);
+.poi-icon-hero {
+    background-image: url(../icons/hero.png);
 }
-.poi-icon-skill-empty {
-    background-image: url(../icons/skill-empty.png);
+.poi-icon-hero-empty {
+    background-image: url(../icons/hero-empty.png);
 }
 .poi-icon-task {
     background-image: url(../icons/task.png);

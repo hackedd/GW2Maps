@@ -2,7 +2,7 @@ var $ = require("jquery"),
     L = require("leaflet"),
     pointTypes = {
         "landmark": "Point of Interest",
-        "skill": "Skill Point",
+        "hero": "Hero Point",
         "task": "Task",
         "vista": "Vista",
         "waypoint": "Waypoint",
