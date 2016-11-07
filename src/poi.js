@@ -23,8 +23,20 @@ PoiMarker = L.Marker.extend({
             raiseOnHover: true
         };
 
-        L.Marker.prototype.initialize.call(this, latlng,
-                L.extend(defaultOptions, options || {}));
+        options = L.extend(defaultOptions, options || {});
+        options.icon = this._parseIcon(options.icon);
+
+        L.Marker.prototype.initialize.call(this, latlng, options);
+    },
+
+    _parseIcon: function (icon) {
+        if (icon === "default" || icon === "complete") {
+            return icons[this.poi.type];
+        }
+        if (icon === "empty" || icon === "incomplete") {
+            return icons[this.poi.type + "-empty"];
+        }
+        return icon;
     },
 
     getPoi: function () {
@@ -36,13 +48,7 @@ PoiMarker = L.Marker.extend({
     },
 
     setIcon: function (icon) {
-        if (icon === "default" || icon === "complete") {
-            icon = icons[this.poi.type];
-        } else if (icon === "empty" || icon === "incomplete") {
-            icon = icons[this.poi.type + "-empty"];
-        }
-
-        L.Marker.prototype.setIcon.call(this, icon);
+        L.Marker.prototype.setIcon.call(this, this._parseIcon(icon));
     }
 });
 
