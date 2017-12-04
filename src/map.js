@@ -12,9 +12,7 @@ function getCoordinates(args) {
     throw new Error("Invalid number of arguments");
 }
 
-GW2Map = L.Class.extend({
-    includes: L.Mixin.Events,
-
+GW2Map = L.Evented.extend({
     options: {
         zoomClassNamePrefix: "zoom-"
     },
