@@ -99,9 +99,9 @@ function addLayer(map, type) {
                     });
                 }
 
-                if (!type || type === "skill") {
+                if (!type || type === "skill" || type === "hero") {
                     $.each(this.skill_challenges, function () {
-                        this.type = "skill";
+                        this.type = "hero";
                         addPoi(this);
                     });
                 }
