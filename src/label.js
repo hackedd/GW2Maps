@@ -1,6 +1,6 @@
 var L = require("leaflet");
 
-module.exports = L.Layer.extend({
+var Label = L.Layer.extend({
     options: {
         cssClass: "area-label",
         events: "click"
@@ -12,8 +12,10 @@ module.exports = L.Layer.extend({
         this._element = null;
 
         L.Util.setOptions(this, options);
-        if (typeof this.options.events == "string")
+
+        if (typeof this.options.events === "string") {
             this.options.events = this.options.events.split(/\s+/);
+        }
     },
 
     onAdd: function (map) {
@@ -61,3 +63,7 @@ module.exports = L.Layer.extend({
         return this;
     }
 });
+
+module.exports = function (bounds, text, options) {
+    return new Label(bounds, text, options);
+};

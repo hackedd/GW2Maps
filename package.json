@@ -1,0 +1,16 @@
+{
+  "name": "gw2maps",
+  "version": "1.0.0",
+  "description": "Library to render Guild Wars 2 maps with Leaflet",
+  "main": "js/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Paul Hooijenga",
+  "license": "MIT",
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^1.1.2",
+    "webpack": "^3.0.0"
+  },
+  "dependencies": {}
+}

@@ -123,8 +123,6 @@ GW2Map = L.Evented.extend({
     }
 });
 
-module.exports ={
-    init: function (domId, continent, floor) {
-        return new GW2Map(domId, continent || "Tyria", floor || 1);
-    }
+module.exports = function (domId, continent, floor) {
+    return new GW2Map(domId, continent || "Tyria", floor || 1);
 };

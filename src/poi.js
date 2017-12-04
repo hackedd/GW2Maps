@@ -13,30 +13,42 @@ var $ = require("jquery"),
 
 PoiMarker = L.Marker.extend({
     initialize: function (poi, latlng, options) {
-        var defaultOptions;
-
         this.poi = poi;
 
-        defaultOptions = {
+        options = options || {};
+        var icon = this._parseIcon(options.icon, poi.type, poi.marker);
+        if (icon) {
+            options.icon = icon;
+        }
+
+        var defaultOptions = {
             title: this.getName(),
-            icon: icons[poi.type] || L.Marker.prototype.options.icon,
             raiseOnHover: true
         };
-
-        options = L.extend(defaultOptions, options || {});
-        options.icon = this._parseIcon(options.icon);
-
+        options = L.extend(defaultOptions, options);
         L.Marker.prototype.initialize.call(this, latlng, options);
     },
 
-    _parseIcon: function (icon) {
+    _parseIcon: function (icon, type, marker) {
         if (icon === "default" || icon === "complete") {
-            return icons[this.poi.type];
+            return icons[type];
         }
+
         if (icon === "empty" || icon === "incomplete") {
-            return icons[this.poi.type + "-empty"];
+            return icons[type + "-empty"];
         }
-        return icon;
+
+        if (marker) {
+            if (!icons[marker.file_id]) {
+                icons[marker.file_id] = L.icon({
+                    iconUrl: "https://render.guildwars2.com/file/" + marker.signature + "/" + marker.file_id + ".png",
+                    iconSize: [32, 32]
+                });
+            }
+            return icons[marker.file_id];
+        }
+
+        return icon || icons[type];
     },
 
     getPoi: function () {
@@ -48,7 +60,7 @@ PoiMarker = L.Marker.extend({
     },
 
     setIcon: function (icon) {
-        L.Marker.prototype.setIcon.call(this, this._parseIcon(icon));
+        L.Marker.prototype.setIcon.call(this, this._parseIcon(icon, this.poi.type, this.poi.marker));
     }
 });
 

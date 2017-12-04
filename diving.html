@@ -3,7 +3,8 @@
   <head>
     <title>Guild Wars 2 Diving Locations</title>
 
-    <link href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet" media="screen">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" rel="stylesheet" media="screen">
+    <link href="src/poi.css" rel="stylesheet">
 
     <style type="text/css">
       body {
@@ -20,50 +21,43 @@
   </head>
   <body>
     <h1>Guild Wars 2 Diving Locations</h1>
+    <p>
+      This map shows the location of all 38 diving goggles required for the
+      <a href="https://wiki.guildwars2.com/wiki/Dive_Master">Dive Master</a> achievement.
+    </p>
     <div id="map"></div>
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
+    <script src="dist/map.js"></script>
     <script>
-    /*<![CDATA[*/
-    var require = {
-        baseUrl: "src",
-        paths: {
-            "jquery": "//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery",
-            "leaflet": "//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet-src",
-        }
-    }
-    /*]]>*/
-    </script>
-    <script src="src/require-2.1.14.js"></script>
-    <script>
-      require(["leaflet", "jquery", "map"], function (L, $, gw2map) {
-          var map = gw2map.init("map", "Tyria"),
-              titleTemplate = "Diving locaiton in {area}, {map}",
-              popupTemplate = ("<h3>Diving location in {area}, {map}</h3>\n" +
-                               "<p>{notes}</p>\n" +
-                               "<p>\n" +
-                               "Closest Waypoint:\n" +
-                               "<strong>{waypoint}</strong> {waypoint_link}<br />\n" +
-                               "Closest POI:\n" +
-                               "</strong>{poi}</strong> {poi_link}<br />" +
-                               "</p>\n");
+        var map = GW2Map.map("map", "Tyria"),
+            titleTemplate = "Diving locaiton in {area}, {map}",
+            popupTemplate = "<h3>Diving location in {area}, {map}</h3>\n" +
+                            "<p>{notes}</p>\n" +
+                            "<p>\n" +
+                            "Closest Waypoint:\n" +
+                            "<strong>{waypoint}</strong> {waypoint_link}<br />\n" +
+                            "Closest POI:\n" +
+                            "<strong>{poi}</strong> {poi_link}<br />" +
+                            "</p>\n";
 
-          map.on("load", function () {
-              $.get("diving-locations.json", function (data) {
-                  $.each(data, function () {
-                      var options = {
-                              title: L.Util.template(titleTemplate, this),
-                              clickable: true
-                          },
-                          marker = L.marker(map.unproject(this.x, this.y), options),
-                          popupText = L.Util.template(popupTemplate, this);
+        map.on("load", function () {
+            $.get("diving-locations.json", function (data) {
+                $.each(data, function () {
+                    var options = {
+                            title: L.Util.template(titleTemplate, this),
+                            clickable: true
+                        },
+                        marker = L.marker(map.unproject(this.x, this.y), options),
+                        popupText = L.Util.template(popupTemplate, this);
 
-                      marker.addTo(map.map);
-                      marker.bindPopup(popupText);
-                      marker.on("click", function () { marker.openPopup(); });
-                  });
-              });
-          });
-      });
+                    marker.addTo(map.map);
+                    marker.bindPopup(popupText);
+                    marker.on("click", function () { marker.openPopup(); });
+                });
+            });
+        });
     </script>
   </body>
 </html>

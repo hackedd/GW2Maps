@@ -3,7 +3,7 @@
   <head>
     <title>Guild Wars 2 Points of Interest</title>
 
-    <link href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel="stylesheet" media="screen">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" rel="stylesheet" media="screen">
     <link href="src/poi.css" rel="stylesheet">
 
     <style type="text/css">
@@ -21,47 +21,48 @@
   </head>
   <body>
     <h1>Guild Wars 2 Points of Interest</h1>
+    <p>
+      This maps shows all landmarks, hero points, tasks, vistas, waypoints and
+      dungeon entrances as returned by the API.
+    </p>
     <div id="map"></div>
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"></script>
+    <script src="dist/map.js"></script>
     <script>
-    /*<![CDATA[*/
-    var require = {
-        baseUrl: "src",
-        paths: {
-            "jquery": "//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery",
-            "leaflet": "//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet-src",
-        }
-    }
-    /*]]>*/
-    </script>
-    <script src="src/require-2.1.14.js"></script>
-    <script>
-      require(["leaflet", "jquery", "map", "poi"], function (L, $, gw2map, poi) {
-          var map = gw2map.init("map", "Tyria");
+        var map = GW2Map.map("map", "Tyria");
 
-          map.on("create", function () {
-              var pois = poi.addLayer(map, "landmark"),
-                  skillPoints = poi.addLayer(map, "skill"),
-                  tasks = poi.addLayer(map, "task"),
-                  vistas = poi.addLayer(map, "vista"),
-                  waypoints = poi.addLayer(map, "waypoint"),
-                  dungeons = poi.addLayer(map, "unlock"),
-                  layers,
-                  layerControl;
+        map.on("create", function () {
+            var pois = GW2Map.addLayer(map, "landmark"),
+                heroPoints = GW2Map.addLayer(map, "skill"),
+                tasks = GW2Map.addLayer(map, "task"),
+                vistas = GW2Map.addLayer(map, "vista"),
+                waypoints = GW2Map.addLayer(map, "waypoint"),
+                dungeons = GW2Map.addLayer(map, "unlock"),
+                layers,
+                layerControl;
 
-              layers = {
-                  "Landmarks": pois,
-                  "Skill Points": skillPoints,
-                  "Tasks": tasks,
-                  "Vistas": vistas,
-                  "Waypoints": waypoints,
-                  "Dungeons": dungeons
-              };
+            layers = {
+                "Landmarks": pois,
+                "Hero Points": heroPoints,
+                "Tasks": tasks,
+                "Vistas": vistas,
+                "Waypoints": waypoints,
+                "Dungeons": dungeons
+            };
 
-              layerControl = L.control.layers({}, layers);
-              layerControl.addTo(map.map);
-          });
-      });
+            layerControl = L.control.layers({}, layers);
+            layerControl.addTo(map.map);
+        });
+
+        map.on("load", function () {
+            // Fit the map to Lion's Arch.
+            map.map.fitBounds([
+                map.unproject([15232, 14336]),
+                map.unproject([17664, 15872])
+            ]);
+        });
     </script>
   </body>
 </html>
