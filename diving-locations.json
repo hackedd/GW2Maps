@@ -1,14 +1,25 @@
 [
     {
-        "map": "Fireheart Rise",
-        "area": "Pig Iron Mine",
-        "notes": "At the start of the Pig Iron Quarry jumping puzzle, at the very top of the tower near the wheel of the giant winch",
-        "poi": "Termerarus Castrum",
-        "poi_link": "[&BAsCAAA=]",
-        "waypoint": "Severed Breach Waypoint",
-        "waypoint_link": "[&BBkCAAA=]",
-        "x": "25991.1",
-        "y": "10815.6"
+        "map": "Plains of Ashford",
+        "area": "Lake Adorea",
+        "notes": "South of Adorea Waypoint",
+        "poi": "Igni Castrum",
+        "poi_link": "[&BFoBAAA=]",
+        "waypoint": "Adorea Waypoint",
+        "waypoint_link": "[&BIUBAAA=]",
+        "x": "26566.6",
+        "y": "15223.2"
+    },
+    {
+        "map": "Plains of Ashford",
+        "area": "Loreclaw Expanse",
+        "notes": "At the vista",
+        "poi": "Camp Keiran",
+        "poi_link": "[&BJMDAAA=]",
+        "waypoint": "Irondock Shipyard Waypoint",
+        "waypoint_link": "[&BIoBAAA=]",
+        "x": "28139",
+        "y": "15221.9"
     },
     {
         "map": "Diessa Plateau",
@@ -31,28 +42,6 @@
         "waypoint_link": "[&BMkDAAA=]",
         "x": "25548.7",
         "y": "11868.2"
-    },
-    {
-        "map": "Plains of Ashford",
-        "area": "Lake Adorea",
-        "notes": "South of Adorea Waypoint",
-        "poi": "Igni Castrum",
-        "poi_link": "[&BFoBAAA=]",
-        "waypoint": "Adorea Waypoint",
-        "waypoint_link": "[&BIUBAAA=]",
-        "x": "26566.6",
-        "y": "15223.2"
-    },
-    {
-        "map": "Plains of Ashford",
-        "area": "Loreclaw Expanse",
-        "notes": "At the vista",
-        "poi": "Camp Keiran",
-        "poi_link": "[&BJMDAAA=]",
-        "waypoint": "Irondock Shipyard Waypoint",
-        "waypoint_link": "[&BIoBAAA=]",
-        "x": "28139",
-        "y": "15221.9"
     },
     {
         "map": "Fields of Ruin",
@@ -99,15 +88,37 @@
         "y": "13099.5"
     },
     {
-        "map": "Bloodtide Coast",
-        "area": "Remanda Saltmarsh",
-        "notes": "West of the Bloody Bill's Base",
-        "poi": "Bloody Bill's Base",
-        "poi_link": "[&BCsAAAA=]",
-        "waypoint": "Deadend Waypoint",
-        "waypoint_link": "[&BAsEAAA=]",
-        "x": "16961.2",
-        "y": "16554.5"
+        "map": "Fireheart Rise",
+        "area": "Pig Iron Mine",
+        "notes": "At the start of the Pig Iron Quarry jumping puzzle, at the very top of the tower near the wheel of the giant winch",
+        "poi": "Termerarus Castrum",
+        "poi_link": "[&BAsCAAA=]",
+        "waypoint": "Severed Breach Waypoint",
+        "waypoint_link": "[&BBkCAAA=]",
+        "x": "25991.1",
+        "y": "10815.6"
+    },
+    {
+        "map": "Kessex Hills",
+        "area": "Wizard's Fief",
+        "notes": "Just before the vista near Isgarren's View",
+        "poi": "Isgarren's View",
+        "poi_link": "[&BAMFAAA=]",
+        "waypoint": "Cereboth Waypoint",
+        "waypoint_link": "[&BBIAAAA=]",
+        "x": "13151.2",
+        "y": "15901.1"
+    },
+    {
+        "map": "Lion's Arch",
+        "area": "Sanctum Harbor",
+        "notes": "At the Diverse Ledges Waypoint",
+        "poi": "Old Lion's Arch",
+        "poi_link": "[&BBwEAAA=]",
+        "waypoint": "Diverse Ledges Waypoint",
+        "waypoint_link": "[&BC0EAAA=]",
+        "x": "15605.1",
+        "y": "15317.9"
     },
     {
         "map": "Gendarran Fields",
@@ -119,17 +130,6 @@
         "waypoint_link": "[&BM0DAAA=]",
         "x": "15686.3",
         "y": "13042.2"
-    },
-    {
-        "map": "Gendarran Fields",
-        "area": "Broadhollow Bluffs",
-        "notes": "Inside the jumping puzzle at Second Aetherblade Site",
-        "poi": "",
-        "poi_link": "",
-        "waypoint": "",
-        "waypoint_link": "",
-        "x": "",
-        "y": ""
     },
     {
         "map": "Gendarran Fields",
@@ -165,103 +165,26 @@
         "y": "12056.6"
     },
     {
-        "map": "Kessex Hills",
-        "area": "Wizard's Fief",
-        "notes": "Just before the vista near Isgarren's View",
-        "poi": "Isgarren's View",
-        "poi_link": "[&BAMFAAA=]",
-        "waypoint": "Cereboth Waypoint",
-        "waypoint_link": "[&BBIAAAA=]",
-        "x": "13151.2",
-        "y": "15901.1"
+        "map": "Bloodtide Coast",
+        "area": "Remanda Saltmarsh",
+        "notes": "West of the Bloody Bill's Base",
+        "poi": "Bloody Bill's Base",
+        "poi_link": "[&BCsAAAA=]",
+        "waypoint": "Deadend Waypoint",
+        "waypoint_link": "[&BAsEAAA=]",
+        "x": "16961.2",
+        "y": "16554.5"
     },
     {
-        "map": "Lion's Arch",
-        "area": "Sanctum Harbor",
-        "notes": "At the Diverse Ledges Waypoint",
-        "poi": "Old Lion's Arch",
-        "poi_link": "[&BBwEAAA=]",
-        "waypoint": "Diverse Ledges Waypoint",
-        "waypoint_link": "[&BC0EAAA=]",
-        "x": "15605.1",
-        "y": "15317.9"
-    },
-    {
-        "map": "Brisban Wildlands",
-        "area": "Gotala Cascade",
-        "notes": "At the vista",
-        "poi": "Ogotl Grounds",
-        "poi_link": "[&BEsAAAA=]",
-        "waypoint": "Brilitine Waypoint",
-        "waypoint_link": "[&BGEAAAA=]",
-        "x": "7808.9",
-        "y": "15617.4"
-    },
-    {
-        "map": "Brisban Wildlands",
-        "area": "Skrittsburgh East End",
-        "notes": "West of East End Waypoint",
-        "poi": "Beldame's Rise",
-        "poi_link": "[&BE4AAAA=]",
-        "waypoint": "East End Waypoint",
-        "waypoint_link": "[&BGAAAAA=]",
-        "x": "8389.7",
-        "y": "15476.1"
-    },
-    {
-        "map": "Caledon Forest",
-        "area": "Dominion of Winds",
-        "notes": "Middle of the bridge from Titan's Staircase",
-        "poi": "Soggorsort",
-        "poi_link": "[&BHEAAAA=]",
-        "waypoint": "Titan's Staircase Waypoint",
-        "waypoint_link": "[&BD0BAAA=]",
-        "x": "10991.9",
-        "y": "17648"
-    },
-    {
-        "map": "Metrica Province",
-        "area": "Hexane Regrade",
-        "notes": "At the vista west of Inquest Outer Complex",
-        "poi": "Inner Inquest Complex",
-        "poi_link": "[&BD0AAAA=]",
-        "waypoint": "Hexane Regrade Waypoint",
-        "waypoint_link": "[&BEUAAAA=]",
-        "x": "8738.4",
-        "y": "17354.6"
-    },
-    {
-        "map": "Metrica Province",
-        "area": "Loch Jezt",
-        "notes": "On the floating stones bridge west of Durotl Grounds",
-        "poi": "Durotl Grounds",
-        "poi_link": "[&BDYAAAA=]",
-        "waypoint": "Loch Waypoint",
-        "waypoint_link": "[&BK8EAAA=]",
-        "x": "8149.9",
-        "y": "19744.9"
-    },
-    {
-        "map": "Mount Maelstrom",
-        "area": "Dierdre's Steps",
-        "notes": "At the Cantle of Sun",
-        "poi": "Zone White",
-        "poi_link": "[&BL4CAAA=]",
-        "waypoint": "Crucible of Eternity Waypoint",
-        "waypoint_link": "[&BEIFAAA=]",
-        "x": "21479.6",
-        "y": "21428.8"
-    },
-    {
-        "map": "Mount Maelstrom",
-        "area": "Dierdre's Steps",
-        "notes": "At the Cantle of Sky",
-        "poi": "Zone White",
-        "poi_link": "[&BL4CAAA=]",
-        "waypoint": "Crucible of Eternity Waypoint",
-        "waypoint_link": "[&BEIFAAA=]",
-        "x": "21413.4",
-        "y": "21710.3"
+        "map": "Gendarran Fields",
+        "area": "Broadhollow Bluffs",
+        "notes": "Inside the jumping puzzle at Second Aetherblade Site",
+        "poi": "Second Aetherblade Site",
+        "poi_link": "[&BBEHAAA=]",
+        "waypoint": "Broadhollow Waypoint",
+        "waypoint_link": "[&BOEAAAA=]",
+        "x": "14987.6",
+        "y": "14184.5"
     },
     {
         "map": "Rata Sum",
@@ -286,37 +209,81 @@
         "y": "21150.3"
     },
     {
-        "map": "Cursed Shore",
-        "area": "Mausollus Sea",
-        "notes": "A little past the beginning of the Buried Archives jumping puzzle",
-        "poi": "Buried Archives",
-        "poi_link": "[&BAsDAAA=]",
-        "waypoint": "Murdered Dreams Waypoint",
-        "waypoint_link": "[&BCIDAAA=]",
-        "x": "11116.2",
-        "y": "28682.1"
+        "map": "Metrica Province",
+        "area": "Hexane Regrade",
+        "notes": "At the vista west of Inquest Outer Complex",
+        "poi": "Inner Inquest Complex",
+        "poi_link": "[&BD0AAAA=]",
+        "waypoint": "Hexane Regrade Waypoint",
+        "waypoint_link": "[&BEUAAAA=]",
+        "x": "8738.4",
+        "y": "17354.6"
     },
     {
-        "map": "Cursed Shore",
-        "area": "Cathedral of Verdance",
-        "notes": "North of the skill point",
-        "poi": "Altar of the Withered Heart",
-        "poi_link": "[&BBYDAAA=]",
-        "waypoint": "Verdance Waypoint",
-        "waypoint_link": "[&BBsDAAA=]",
-        "x": "11301.9",
-        "y": "26653.8"
+        "map": "Metrica Province",
+        "area": "Loch Jezt",
+        "notes": "On the floating stones bridge west of Durotl Grounds",
+        "poi": "Durotl Grounds",
+        "poi_link": "[&BDYAAAA=]",
+        "waypoint": "Loch Waypoint",
+        "waypoint_link": "[&BK8EAAA=]",
+        "x": "8149.9",
+        "y": "19744.9"
     },
     {
-        "map": "Malchor's Leap",
-        "area": "Cathedral of Zephyrs",
-        "notes": "At Sculptor's End",
-        "poi": "Sculptor's End",
-        "poi_link": "[&BJECAAA=]",
-        "waypoint": "Murmur Waypoint",
-        "waypoint_link": "[&BK8CAAA=]",
-        "x": "11758.7",
-        "y": "23975.7"
+        "map": "Caledon Forest",
+        "area": "Dominion of Winds",
+        "notes": "Middle of the bridge from Titan's Staircase",
+        "poi": "Soggorsort",
+        "poi_link": "[&BHEAAAA=]",
+        "waypoint": "Titan's Staircase Waypoint",
+        "waypoint_link": "[&BD0BAAA=]",
+        "x": "10991.9",
+        "y": "17648"
+    },
+    {
+        "map": "Brisban Wildlands",
+        "area": "Gotala Cascade",
+        "notes": "At the vista",
+        "poi": "Ogotl Grounds",
+        "poi_link": "[&BEsAAAA=]",
+        "waypoint": "Brilitine Waypoint",
+        "waypoint_link": "[&BGEAAAA=]",
+        "x": "7808.9",
+        "y": "15617.4"
+    },
+    {
+        "map": "Brisban Wildlands",
+        "area": "Skrittsburgh East End",
+        "notes": "West of East End Waypoint",
+        "poi": "Beldame's Rise",
+        "poi_link": "[&BE4AAAA=]",
+        "waypoint": "East End Waypoint",
+        "waypoint_link": "[&BGAAAAA=]",
+        "x": "8389.7",
+        "y": "15476.1"
+    },
+    {
+        "map": "Mount Maelstrom",
+        "area": "Dierdre's Steps",
+        "notes": "At the Cantle of Sun",
+        "poi": "Zone White",
+        "poi_link": "[&BL4CAAA=]",
+        "waypoint": "Crucible of Eternity Waypoint",
+        "waypoint_link": "[&BEIFAAA=]",
+        "x": "21479.6",
+        "y": "21428.8"
+    },
+    {
+        "map": "Mount Maelstrom",
+        "area": "Dierdre's Steps",
+        "notes": "At the Cantle of Sky",
+        "poi": "Zone White",
+        "poi_link": "[&BL4CAAA=]",
+        "waypoint": "Crucible of Eternity Waypoint",
+        "waypoint_link": "[&BEIFAAA=]",
+        "x": "21413.4",
+        "y": "21710.3"
     },
     {
         "map": "Straits of Devastation",
@@ -339,6 +306,61 @@
         "waypoint_link": "[&BO4CAAA=]",
         "x": "16934.9",
         "y": "23647.1"
+    },
+    {
+        "map": "Malchor's Leap",
+        "area": "Cathedral of Zephyrs",
+        "notes": "At Sculptor's End",
+        "poi": "Sculptor's End",
+        "poi_link": "[&BJECAAA=]",
+        "waypoint": "Murmur Waypoint",
+        "waypoint_link": "[&BK8CAAA=]",
+        "x": "11758.7",
+        "y": "23975.7"
+    },
+    {
+        "map": "Cursed Shore",
+        "area": "Mausollus Sea",
+        "notes": "A little past the beginning of the Buried Archives jumping puzzle",
+        "poi": "Buried Archives",
+        "poi_link": "[&BAsDAAA=]",
+        "waypoint": "Murdered Dreams Waypoint",
+        "waypoint_link": "[&BCIDAAA=]",
+        "x": "11116.2",
+        "y": "28682.1"
+    },
+    {
+        "map": "Cursed Shore",
+        "area": "Cathedral of Verdance",
+        "notes": "North of the skill point",
+        "poi": "Altar of the Withered Heart",
+        "poi_link": "[&BBYDAAA=]",
+        "waypoint": "Verdance Waypoint",
+        "waypoint_link": "[&BBsDAAA=]",
+        "x": "11301.9",
+        "y": "26653.8"
+    },
+    {
+        "map": "Wayfarer Foothills",
+        "area": "Grawlenfjord",
+        "notes": "On the eastern bluffs across the creek from Heart of the Bear",
+        "poi": "Heart of the Bear",
+        "poi_link": "[&BGkBAAA=]",
+        "waypoint": "Grawlenfjord Waypoint",
+        "waypoint_link": "[&BMMDAAA=]",
+        "x": "23122.5",
+        "y": "14744"
+    },
+    {
+        "map": "Wayfarer Foothills",
+        "area": "Taigan Groves",
+        "notes": "Northwest of Victor's Point",
+        "poi": "Victor's Point",
+        "poi_link": "[&BG8BAAA=]",
+        "waypoint": "Taigan Waypoint",
+        "waypoint_link": "[&BHYBAAA=]",
+        "x": "22892.5",
+        "y": "13653"
     },
     {
         "map": "Frostgorge Sound",
@@ -394,27 +416,5 @@
         "waypoint_link": "[&BEkCAAA=]",
         "x": "20519.1",
         "y": "20587.5"
-    },
-    {
-        "map": "Wayfarer Foothills",
-        "area": "Grawlenfjord",
-        "notes": "On the eastern bluffs across the creek from Heart of the Bear",
-        "poi": "Heart of the Bear",
-        "poi_link": "[&BGkBAAA=]",
-        "waypoint": "Grawlenfjord Waypoint",
-        "waypoint_link": "[&BMMDAAA=]",
-        "x": "23122.5",
-        "y": "14744"
-    },
-    {
-        "map": "Wayfarer Foothills",
-        "area": "Taigan Groves",
-        "notes": "Northwest of Victor's Point",
-        "poi": "Victor's Point",
-        "poi_link": "[&BG8BAAA=]",
-        "waypoint": "Taigan Waypoint",
-        "waypoint_link": "[&BHYBAAA=]",
-        "x": "22892.5",
-        "y": "13653"
     }
 ]
